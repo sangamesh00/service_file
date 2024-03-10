@@ -1,0 +1,13 @@
+[Unit]
+Description=My Java Application
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu
+ExecStart=/home/ubuntu/java -jar tdd-supermarket-1.0.0-SNAPSHOT.jar
+Restart=on-failure
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
